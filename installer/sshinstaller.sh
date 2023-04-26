@@ -134,13 +134,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/sreyaeve/eve/main/file/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/sreyaeve/eve/main/websocket/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/sreyaeve/eve/main/file/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/sreyaeve/eve/main/websocket/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
