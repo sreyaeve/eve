@@ -136,7 +136,7 @@ echo -e "$green         Autoscript Zenvpn               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${RED}┌───────────────────────────────────────┐${NC}"
 sleep 0.5
-     red "            PANEL DOMAIN/SUBDOMAIN"
+     red "         PANEL DOMAIN/SUBDOMAIN"
 echo -e "${RED}└───────────────────────────────────────┘${NC}" 
 echo -e ""
 echo -e "${GREEN}1${NC}. Domain Pribadi"
@@ -205,7 +205,7 @@ echo -e "$green         Autoscript Zenvpn               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${RED}┌───────────────────────────────────────┐${NC}"
 sleep 0.5
-     red "          MASUKAN DOMAIN/SUBDOMAIN MU"
+     red "       MASUKAN DOMAIN/SUBDOMAIN MU"
 echo -e "${RED}└───────────────────────────────────────┘${NC}" 
 echo " "
 read -rp "Input domain kamu : " -e dns
@@ -244,16 +244,16 @@ echo -e "$green         Install Backup               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/sreyaeve/sshxrayv2/main/backup/backupinstaller.sh && chmod +x backupinstaller.sh && ./backupinstaller.sh
+wget https://raw.githubusercontent.com/sreyaeve/eve/main/installer/backupinstaller.sh && chmod +x backupinstaller.sh && ./backupinstaller.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/sreyaeve/sshxrayv2/main/xray/xrayinstaller.sh && chmod +x xrayinstaller.sh && ./xrayinstaller.sh
-wget https://raw.githubusercontent.com/sreyaeve/sshxrayv2/main/sshws/websocketinstaller.sh && chmod +x websocketinstaller.sh && ./websocketinstaller.sh
-wget -q https://raw.githubusercontent.com/sreyaeve/sshxrayv2/main/toolsinstaller.sh;chmod +x toolsinstaller.sh;./toolsinstaller.sh
+wget https://raw.githubusercontent.com/sreyaeve/eve/main/installer/xrayinstaller.sh && chmod +x xrayinstaller.sh && ./xrayinstaller.sh
+wget https://raw.githubusercontent.com/sreyaeve/eve/main/installer/websocketinstaller.sh && chmod +x websocketinstaller.sh && ./websocketinstaller.sh
+wget -q https://raw.githubusercontent.com/sreyaeve/eve/main/installer/toolsinstaller.sh;chmod +x toolsinstaller.sh;./toolsinstaller.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
