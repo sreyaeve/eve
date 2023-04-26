@@ -21,7 +21,7 @@ exit 0
 fi
 clear 
 echo -e "\e[32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "            • Backup & Restore •         "
+echo -e "        • Backup & Restore •         "
 echo -e "\e[32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "" 
 echo -e " [\e[36m•1\e[0m] Backup VPS Data"
