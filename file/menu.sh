@@ -83,9 +83,23 @@ today_rx=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $2}')
 today_rxv=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $3}')
 today_tx=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $5}')
 today_txv=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $6}')
-dmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $2" "substr ($3, 1 ,3)}')"
-umon="$(vnstat -m | grep `date +%G-%m` | awk '{print $5" "substr ($6, 1 ,3)}')"
-tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}')"
+if [ "$(grep -wc ${bulan} /root/t1)" != '0' ]; then
+    bulan=$(date +%b)
+    month=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $9}')
+    month_v=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $10}')
+    month_rx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $3}')
+    month_rxv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $4}')
+    month_tx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $6}')
+    month_txv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $7}')
+else
+    bulan=$(date +%Y-%m)
+    month=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $8}')
+    month_v=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $9}')
+    month_rx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $2}')
+    month_rxv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $3}')
+    month_tx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $5}')
+    month_txv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $6}')
+fi
 # Getting CPU Information
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
@@ -116,7 +130,7 @@ echo -e "\e[32m System Uptime \e[0m:  $uptime"
 echo -e "\e[32m Waktu         \e[0m:  $DATE2"	
 echo -e "\e[32m RAM Usage     \e[0m:  $uram MB | $tram MB"	
 echo -e "\e[32m CPU Info      \e[0m:  $cpu_usage ($cname Processor @ $freq MHz)"
-echo -e "\e[32m Bandwidth     \e[0m:  $todayd $today_v (Hari Ini) $tmon (Bulan Ini)"
+echo -e "\e[32m Bandwidth     \e[0m:  \e[32m$todayd\e[0m \e[32m$today_v\e[0m (Hari Ini) \e[32m$month\e[0m \e[32m$month_v\e[0m (Bulan Ini)"
 echo -e "\e[32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "                  • MENU SSH | XRAY •                 "
 echo -e "\e[32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
