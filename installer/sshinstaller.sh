@@ -262,6 +262,13 @@ cat> /etc/issue.net << END
 <p style="text-align:center"><b>
 <br>
 <font color="red"><b>Autoscript Mod By ZenVPN</font><br>
+<br>
+No Ddos<br>
+No Spam<br>
+No Multilogin<br>
+No Bot<br>
+No Illegal Activity<br>
+<br>
 Support Me<br>
 Telegram : t.me/zenvio | t.me/retapstore<br>
 WhatsApp : <font color="blue">081977814343<\font>
