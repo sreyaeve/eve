@@ -97,7 +97,7 @@ OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{prin
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
 
-Login=ZenSSH-`</dev/urandom tr -dc 0-9 | head -c4`
+Login=zen`</dev/urandom tr -dc 0-9 | head -c4`
 hari="1"
 Pass=zen
 echo Ping Host
@@ -113,7 +113,7 @@ PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "           TRIAL SSH                 "
+echo -e "            TRIAL SSH                 "
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Username   : $Login"
 echo -e "Password   : $Pass"
@@ -138,7 +138,7 @@ echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━
 else
 
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "           TRIAL SSH                "
+echo -e "            TRIAL SSH                "
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Username   : $Login"
 echo -e "Password   : $Pass"
