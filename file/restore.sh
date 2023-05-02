@@ -25,33 +25,34 @@ echo "Pastikan File tersebut adalah hasil dari backupan autoscript ini saja"
 echo "Silahkan masukan link file backupnya"
 echo -e ""
 read -rp "Link File: " -e url
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Starting to restore data..."
 wget -O backup.zip "$url"
 unzip backup.zip
 rm -f backup.zip
 sleep 1
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Starting to restore data..."
+
 rm -f /root/backup/backup.zip &> /dev/null
 sleep 1
 cd /root/backup
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring passwd data..."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Restoring passwd data..."
 sleep 1
 cp /root/backup/passwd /etc/ &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring group data..."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Restoring group data..."
 sleep 1
 cp /root/backup/group /etc/ &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring shadow data..."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Restoring shadow data..."
 sleep 1
 cp /root/backup/shadow /etc/ &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring gshadow data..."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Restoring gshadow data..."
 sleep 1
 cp /root/backup/gshadow /etc/ &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring chap-secrets data..."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Restoring chap-secrets data..."
 sleep 1
 cp /root/backup/chap-secrets /etc/ppp/ &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring ss.conf data..."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Restoring ss.conf data..."
 sleep 1
 cp /root/backup/ss.conf /etc/shadowsocks-libev/ss.conf &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring admin data..."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Restoring admin data..."
 sleep 1
 cp -r /root/backup/zenhost /var/lib/ &> /dev/null
 cp -r /root/backup/.acme.sh /root/ &> /dev/null
@@ -61,7 +62,7 @@ cp -r /root/backup/public_html /home/vps/ &> /dev/null
 cp -r /root/backup/crontab /etc/ &> /dev/null
 cp -r /root/backup/cron.d /etc/ &> /dev/null
 rm -rf /root/backup &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Done... Successfully Pakbroo."
+echo -e "${GREEN}│${NC}  [ ${BLUE}INFO${NC} ] • Done... Successfully Pakbroo."
 sleep 1
 rm -f /root/backup/backup.zip &> /dev/null
 echo -e "${GREEN}└─────────────────────────────────────────────────┘${NC}" 
