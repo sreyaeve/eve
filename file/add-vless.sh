@@ -41,7 +41,7 @@ clear
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
 			read -n 1 -s -r -p "Press any key to back on menu"
-			v2ray-menu
+			
 		fi
 	done
 
