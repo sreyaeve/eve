@@ -80,7 +80,7 @@ clear
 
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "        Trial Vmess              " | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "           Trial Vmess              " | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Domain         : ${domain}" | tee -a /etc/xraylog/log-vmess-$user.txt
