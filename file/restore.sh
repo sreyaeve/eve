@@ -20,8 +20,9 @@ clear
 echo -e "${GREEN}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "${GREEN}│${NC} ${COLBG1}            • RESTORE PANEL MENU •             ${NC} ${GREEN}│$NC"
 echo -e "${GREEN}└─────────────────────────────────────────────────┘${NC}"
-echo "This Feature Can Only Be Used According To Vps Data With This Autoscript"
-echo "Please input link to your vps data backup file."
+echo ""
+echo "Pastikan File tersebut adalah hasil dari backupan autoscript ini saja"
+echo "Silahkan masukan link file backupnya"
 echo -e ""
 read -rp "Link File: " -e url
 wget -O backup.zip "$url"
