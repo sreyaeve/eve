@@ -34,7 +34,7 @@ exit 0
 fi
 clear 
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "            • UBAH DOMAIN •             "
+echo -e "          • UBAH DOMAIN •             "
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "" 
 echo -e " [\e[36m•1\e[0m] GANTI DOMAIN VPS"
