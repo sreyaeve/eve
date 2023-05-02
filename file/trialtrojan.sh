@@ -29,7 +29,7 @@ trojanlink="trojan://${uuid}@isi_bug_disini:${tls}?path=%2Ftrojan-ws&security=tl
 trojanlink2="trojan://${uuid}@isi_bug_disini:${ntls}?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws#${user}"
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
-echo -e "         Trial Trojan               " | tee -a /etc/xraylog/log-trojan-$user.txt
+echo -e "           Trial Trojan               " | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Host/IP        : ${domain}" | tee -a /etc/xraylog/log-trojan-$user.txt
