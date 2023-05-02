@@ -28,7 +28,7 @@ vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none
 systemctl restart xray
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e "         Trial Vless              " | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "            Trial Vless              " | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Domain         : ${domain}" | tee -a /etc/xraylog/log-vless-$user.txt
