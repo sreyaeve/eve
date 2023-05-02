@@ -34,10 +34,8 @@ cp /etc/gshadow /root/backup/ &> /dev/null
 cp /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
 cp -r /var/lib/zenhost/ /root/backup/zenhost &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
-cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
 cp /etc/crontab /root/backup/crontab &> /dev/null
-cp /etc/xraylog /root/backup/xraylog &> /dev/null
 cd /root
 zip -r $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
@@ -64,4 +62,4 @@ echo -e "Detail Backup
  "${RED}└───────────────────────────────────────┘${NC}" 
 "
 echo "Silahkan copy Link dan restore di VPS baru"
-echo "Terimkasih sudah menggunakan layanan ZenVPN"
+echo "Terimakasih sudah menggunakan layanan ZenVPN"
