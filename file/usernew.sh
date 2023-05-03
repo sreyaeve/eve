@@ -88,7 +88,7 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "Dropbear    : $db" | tee -a /etc/log-create-user.log
 echo -e "SSH WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH SSL WS  : $wsssl" | tee -a /etc/log-create-user.log
-echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
+echo -e "SSL/TLS     :$ssl" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/log-create-user.log
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
@@ -106,7 +106,7 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "Dropbear    : $db" | tee -a /etc/log-create-user.log
 echo -e "SSH WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH SSL WS  : $wsssl" | tee -a /etc/log-create-user.log
-echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
+echo -e "SSL/TLS     :$ssl" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/log-create-user.log
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
