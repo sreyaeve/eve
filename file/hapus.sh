@@ -72,7 +72,7 @@ fi
 
 clear
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "              MEMBER SSH                   "
+echo -e "                MEMBER SSH                   "
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo "USERNAME          EXP DATE          "
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -92,7 +92,7 @@ fi
 done < /etc/passwd
 
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "            Hapus Akun SSH                  "
+echo -e "              Hapus Akun SSH                  "
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
 echo ""
 read -p "Ketik Usernamenya : " Pengguna
