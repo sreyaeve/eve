@@ -99,7 +99,11 @@ do
         USER=`cat /tmp/login-db-pid.txt | awk '{print $10}'`;
         IP=`cat /tmp/login-db-pid.txt | awk '{print $12}'`;
         if [ $NUM -eq 1 ]; then
-                echo "> Pid = $PID > User = $USER > IP = $IP";
+                echo "--------------------"                                                               
+                echo " Username = $USER"
+                echo " Log Pid = $PID"
+                echo " IP = $IP";
+                echo "--------------------"
         fi
 
 done
@@ -113,7 +117,15 @@ do
         USER=`cat /tmp/login-db-pid.txt | awk '{print $9}'`;
         IP=`cat /tmp/login-db-pid.txt | awk '{print $11}'`;
         if [ $NUM -eq 1 ]; then
-                echo ">Pid = $PID > User = $USER > IP = $IP";
+                echo "--------------------"                                                               
+
+                echo " Username = $USER"
+
+                echo " Log Pid = $PID"
+
+                echo " IP = $IP";
+
+                echo "--------------------"
         fi
 
 done
