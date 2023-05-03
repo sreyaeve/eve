@@ -78,7 +78,7 @@ fi
 clear
                hariini=`date +%d-%m-%Y`
                echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-               echo -e "     Auto Hapus Expired SSH            "
+               echo -e "         Auto Hapus Expired SSH            "
                echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
                echo "Hapus Akun Berhasil Sayang"
                echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
