@@ -259,19 +259,21 @@ chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 cat> /etc/issue.net << END
+
 <p style="text-align:center"><b>
+<font color="red"><b>☆ Premium Server ☆</font><br>
+Read the Rules<br>
+◖NO DDOS◗ ◖NO SPAM◗ ◖NO BOT◗ ◖NO TORRENT◗<br>
+◖NO PORN◗ ◖NO MINING◗ ◖NO ILLEGAL ACTIVITY◗<br>
 <br>
-<font color="red"><b>Autoscript Mod By ZenVPN</font><br>
+<font color="red">Layanan Kami</font><br>
+◉ SSH Websocket ◉ Xray Vmess ◉ Xray Trojan ◉<br>
+◉ SSH SlowDNS ◉ Xray Vless ◉ Xray For STB ◉<br>
 <br>
-No Ddos<br>
-No Spam<br>
-No Multilogin<br>
-No Bot<br>
-No Illegal Activity<br>
-<br>
-Support Me<br>
+<font color="red">Info Order</font><br>
+Shopee : https://shp.ee/ri6pacw
 Telegram : t.me/zenvio | t.me/retapstore<br>
-WhatsApp : <font color="blue">081977814343<\font>
+WhatsApp : wa.me/081977814343
 END
 #install bbr dan optimasi kernel
 #wget https://raw.githubusercontent.com/sreyaeve/eve/main/file/bbr.sh && chmod +x bbr.sh && ./bbr.sh
