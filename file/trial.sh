@@ -115,6 +115,9 @@ ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | 
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
+ISP=$(cat /usr/local/etc/xray/org)
+
+CITY=$(cat /usr/local/etc/xray/city)
 
 Login=zen`</dev/urandom tr -dc 0-9 | head -c4`
 hari="1"
@@ -140,6 +143,7 @@ echo -e "Expired On : $exp"
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "IP         : $IP"
 echo -e "Host       : $domen"
+echo -e "ISP        : $ISP"
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db"
 echo -e "SSH WS     : $portsshws"
@@ -159,6 +163,7 @@ echo -e "Expired On : $exp"
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "IP         : $IP"
 echo -e "Host       : $domen"
+echo -e "ISP        : $ISP"
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db"
 echo -e "SSH WS     : $portsshws"
