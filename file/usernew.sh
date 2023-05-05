@@ -47,6 +47,9 @@ domen=`cat /etc/xray/domain`
 fi
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
+ISP=$(cat /usr/local/etc/xray/org)
+
+CITY=$(cat /usr/local/etc/xray/city)
 
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "           SSH Account            "
@@ -84,6 +87,7 @@ echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "IP          : $IP" | tee -a /etc/log-create-user.log
 echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
+echo -e "ISP         : $ISP" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "Dropbear    : $db" | tee -a /etc/log-create-user.log
 echo -e "SSH WS      : $portsshws" | tee -a /etc/log-create-user.log
@@ -102,6 +106,7 @@ echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "IP          : $IP" | tee -a /etc/log-create-user.log
 echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
+echo -e "ISP         : $ISP" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "Dropbear    : $db" | tee -a /etc/log-create-user.log
 echo -e "SSH WS      : $portsshws" | tee -a /etc/log-create-user.log
